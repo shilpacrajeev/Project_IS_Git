@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+			<title>I-Tec</title>
+			<link href="css/style.css" rel="stylesheet" type="text/css">
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+		<script type="text/javascript">
+			var slideimages = new Array() // create new array to preload images
+			slideimages[0] = new Image() // create new instance of image object
+			slideimages[0].src = "./images/banner1.jpg" // set image object src property to an image's src, preloading that image in the process
+			slideimages[1] = new Image()
+			slideimages[1].src = "./images/banner2.jpg"
+			slideimages[2] = new Image()
+			slideimages[2].src = "./images/banner3.jpg"
+			slideimages[3] = new Image()
+			slideimages[3].src = "./images/banner4.jpg"
+			slideimages[4] = new Image()
+			slideimages[4].src = "./images/banner5.jpg"
+			slideimages[5] = new Image()
+			slideimages[5].src = "./images/banner6.jpg"
+		</script>
+		<div class="header_bg">
+					<div class="wrap"> 
+						<div class="margin_top">
+								<div class="top_menu_region">
+									<div class="top_menu_style">
+								     	<div class="menu">
+								     	<nav>
+								     		<ul>
+										    	<li><a href="index.html">Home</a></li>
+												<li><a href="Login.php">Login</a></li>
+										     	<li class="active"><a href="ContactUs.html">Contact Us</a></li>
+							     			</ul>
+							     			</nav>
+								     	</div>
+								     	<div class="clear"></div>
+						     	</div>
+							     <div class="header-bottom">
+									 <div class="logo">
+										<h1><a href="index.html">I-Tec</a></h1>
+										<h6> An Integrated Solution</h6>
+									 </div>
+									<div class="clear"></div> 
+								</div>
+							</div>	
+						</div>
+					 </div>
+		</div>
+		<div class="pink_shade">
+			<div class="wrap">
+				<div class="main_body">
+					<div class="main_image">
+							<img id="slide"src="images/banner1.jpg" alt="" width="1190px" height="350px">
+							<script type="text/javascript">			
+									//variable that will increment through the images
+									var step=0			
+									function slideit(){
+									 //if browser does not support the image object, exit.
+									 if (!document.images)
+									  return
+									 document.getElementById('slide').src = slideimages[step].src
+									 if (step<5)
+									  step++
+									 else
+									  step=0
+									 //call function "slideit()" every 2.5 seconds
+									 setTimeout("slideit()",2000)
+									}
+									
+									slideit();
+							</script>									
+							<div class="main_body_text">
+								<div class="col_1">								
+											<div class="title-img1">
+												<div class="title"><img src="images/contact_phone.png" alt=""/></div>
+													<div class="title-desc"><h6>Contact</h6></div>
+													<div class="clear"></div> 
+											</div>	
+											<div>				
+											<p class="bold_style">
+											Shilpa.C
+											<br> Contact No.: 8281728847
+											</p>
+											</div>
+								</div>
+								<div class="clear"></div> 
+							</div>					
+					</div>
+				</div>
+			</div>					
+			<div class="clear"></div> 
+		</div>			
+		<div class="pink_shade">
+			<div class="wrap">
+		   		<div class="designer">
+					<p>Design by Shilpa.C</p>
+				</div>
+			</div>
+		</div>
+
+</body>
+</html>
